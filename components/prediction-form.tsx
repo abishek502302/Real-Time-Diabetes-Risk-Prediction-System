@@ -11,6 +11,7 @@ import { Switch } from "@/components/ui/switch"
 import { Spinner } from "@/components/ui/spinner"
 import { AlertCircle } from "lucide-react"
 import { Alert, AlertDescription } from "@/components/ui/alert"
+import { appPath } from "@/lib/supabase/auth-redirect"
 
 export interface PredictionInput {
   gender: "Male" | "Female" | "Other"
@@ -88,14 +89,22 @@ export function PredictionForm({ onResult, defaultValues, compact = false }: Pre
         throw new Error("Your saved health questionnaire is invalid. Please complete it again.")
       }
 
-      const response = await fetch("/api/predict", {
+      const response = await fetch(appPath("/api/predict"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ predictionInput: formData, questionnaire: intake }),
       })
 
       if (!response.ok) {
-        const errorData: unknown = await response.json()
+        let errorData: unknown
+        const responseText = await response.text()
+        try {
+          errorData = JSON.parse(responseText)
+        } catch {
+          throw new Error(
+            "The prediction server is unavailable. Start the Next.js app and Flask backend, then try again.",
+          )
+        }
         if (response.status === 401) setNeedsSignIn(true)
         if (typeof errorData === "object" && errorData !== null) {
           const payload = errorData as {

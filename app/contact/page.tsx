@@ -11,10 +11,11 @@ import {
 } from "lucide-react"
 
 const teamMembers = [
-  { name: "Thabith Atlas X", email: "thabith.502359@sxcce.edu.in", role: "Team lead" },
   { name: "Abishek S V", email: "abishek.502302@sxcce.edu.in", role: "Team member" },
   { name: "Jerish Moni M", email: "jerish.502327@sxcce.edu.in", role: "Team member" },
   { name: "Starwin Binesh S S", email: "starwin.502355@sxcce.edu.in", role: "Team member" },
+{ name: "Thabith Atlas X", email: "thabith.502359@sxcce.edu.in", role: "Team member" },
+  
 ]
 
 const projectTitle =
@@ -215,8 +216,7 @@ export default function ContactPage() {
             </section>
 
             <p className="px-1 text-xs leading-5 text-muted-foreground">
-              This project is for educational purposes and is not a substitute
-              for professional medical advice or diagnosis.
+              
             </p>
           </aside>
         </div>

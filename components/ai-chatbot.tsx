@@ -8,6 +8,7 @@ import remarkGfm from "remark-gfm"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { cn } from "@/lib/utils"
+import { appPath } from "@/lib/supabase/auth-redirect"
 
 type ChatMessage = { role: "user" | "assistant"; content: string }
 
@@ -76,7 +77,7 @@ export function AiChatbot() {
     setLoading(true)
 
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch(appPath("/api/chat"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: conversation }),

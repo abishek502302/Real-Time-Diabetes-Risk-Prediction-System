@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Textarea } from "@/components/ui/textarea"
 import { cn } from "@/lib/utils"
 import type { PredictionInput, PredictionResult } from "@/components/prediction-form"
+import { appPath } from "@/lib/supabase/auth-redirect"
 
 type ImpactRow = {
   feature: string
@@ -88,7 +89,7 @@ export function ExplainChatbot({ input, result, impacts }: ExplainChatbotProps) 
     setLoading(true)
 
     try {
-      const response = await fetch("/api/explain-chat", {
+      const response = await fetch(appPath("/api/explain-chat"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: nextMessages, input, result, impacts }),

@@ -1,0 +1,9 @@
+1:"$Sreact.fragment"
+2:I[47257,["/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/0yv7w2mkj9yd0.js","/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/0n28skxznfeu9.js","/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/0d34.ax3r0ik7.js"],"ClientPageRoot"]
+3:I[14703,["/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/0yv7w2mkj9yd0.js","/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/0n28skxznfeu9.js","/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/0d34.ax3r0ik7.js","/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/0fgm7~46.ym1j.js","/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/03yehfl1c1mgi.js"],"default"]
+6:I[97367,["/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/0yv7w2mkj9yd0.js","/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/0n28skxznfeu9.js","/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/0d34.ax3r0ik7.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/0fgm7~46.ym1j.js","async":true}],["$","script","script-1",{"src":"/Real-Time-Diabetes-Risk-Prediction-System/_next/static/chunks/03yehfl1c1mgi.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"zYjQVhFMSoTDEZ_KAVWat"}
+4:{}
+5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null
